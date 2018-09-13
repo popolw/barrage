@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomeVideo</title>
+    
+    <meta charset="utf-8" />
+    
+   
+    <style type="text/css">
+     .video-barrage
+     {
+        top: 0;
+        /* border: 1px solid red; */
+        display: block;
+        z-index: 99;
+        position: absolute;
+        width: 600px;
+        height: 310px; 
+     }
+
+     .video-warpper{
+         display: block;
+         margin: 0 auto;
+     }
+     .video-player{
+         margin-top: -40px;
+     }
+    </style>
+</head>
+<body>
+    <div class="video-warpper">
+        <video class="video-player"  id="video" src="~/media/Teddy2.mkv"  width="600" height="400" controls="controls">
+        your browser does not support the video tag
+        </video>
+        <canvas class="video-barrage" id="canvas"></canvas>
+    </div>
+
+    
+     <div>
+        <table style="text-align:left;">
+            <tr>
+                <td><div id="colorpicker"></div></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="color1"></td>
+            </tr>
+            <tr>
+                <td>message:</td>
+            </tr>
+            <tr>
+                <td>
+                   <textarea id="txtMessage" cols="30" rows="5"></textarea>                
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2"><input type="button" id="btn_Send" value="send-message"/></td>
+            </tr>
+        </table>    
+    </div> 
+    <!-- <div><ul></ul></div> -->
+
+</body>
+</html>
+
+ <script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+ <script type="text/javascript" src="~/lib/signalr.min.js"></script>
+ <script type="text/javascript" src="~/js/jbin/barrage.js"></script>
+ <script type="text/javascript" src="~/lib/farbtastic.js"></script>
+ <script type="text/javascript" src="~/js/chat.js"></script>
+
