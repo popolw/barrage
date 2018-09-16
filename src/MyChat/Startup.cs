@@ -35,6 +35,7 @@ namespace MyChat
 
             var provider = new FileExtensionContentTypeProvider();
             provider.Mappings[".mkv"]="video/x-matroska";
+            provider.Mappings[".mp4"]="video/mp4";
             
 
             app.UseStaticFiles(new StaticFileOptions{ContentTypeProvider=provider});

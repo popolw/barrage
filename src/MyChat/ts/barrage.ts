@@ -102,7 +102,7 @@ class barrage {
                         }
                     }
                 });
-               
+                requestAnimationFrame(function () { $this.render(); });
                 break;
             case opeart.seek:
                 this.clear();
@@ -111,7 +111,7 @@ class barrage {
                 //this.clear();
                 break;
         }
-        requestAnimationFrame(function () { $this.render(); });
+        
 
     }
 

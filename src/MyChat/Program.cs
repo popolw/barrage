@@ -15,7 +15,7 @@ namespace MyChat
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .UseKestrel()
-                .UseUrls("http://localhost:9090")
+                .UseUrls("http://0.0.0.0:9090")
                 //.UseUrls("http://192.168.0.101:9090")
                 .Build();
         
